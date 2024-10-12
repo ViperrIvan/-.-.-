@@ -1,0 +1,21 @@
+from random import randint
+def max_(data):
+    r = data[0]
+    for i in data:
+        if i>=r:
+            r=i
+    return r
+def min_(data):
+    r = data[0]
+    for i in data:
+        if i<=r:
+            r=i
+    return r
+try:
+    n = int(input('Введите количество случайных чисел: '))
+except ValueError:
+    print('Введите числовое значение!!!')
+random_list = [randint(1, 100) for i in range(n)]
+print(f' Случайно сгенерированный список: {" ".join(map(str, random_list))}')
+print(f'Максимальное значение в списке: {max_(random_list)}')
+print(f'Минимальное значение в списке: {min_(random_list)}')
