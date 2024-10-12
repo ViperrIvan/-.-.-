@@ -1,0 +1,9 @@
+list_0 = map(int, input().split())
+summ=0
+try:
+    for i in list_0:
+        if i>0:
+            summ+=i
+    print(summ)
+except ValueError:
+    print('Вы ввели не числовое значение!')
